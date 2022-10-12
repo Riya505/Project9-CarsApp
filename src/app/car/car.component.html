@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">car</th>
+                    <th scope="col">car_model</th>
+                    <th scope="col">car_color</th>
+                    <th scope="col">car_model_year</th>
+                    <th scope="col">car_vin</th>
+                    <th scope="col">price</th>
+                    <th scope="col">availability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of carData.cars">
+                    <td>{{i.id}}</td>
+                    <td>{{i.car}}</td>
+                    <td>{{i.car_model}}</td>
+                    <td>{{i.car_color}}</td>
+                    <td>{{i.car_model_year}}</td>
+                    <td>{{i.car_vin}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.availability}}</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
