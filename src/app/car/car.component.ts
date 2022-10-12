@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-car',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) {
+    this.fetchData()
+  }
+  fetchData=()=>{
+    this.myapi.viewData().subscribe(
+      (data)=>{
+        this.carData=data
+      }
+    )
+  }
+   
+  
 
   carData:any={}
 
